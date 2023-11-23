@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>The Silence Coffee</title>
+<link rel="icon" type="image/x-icon" href="imagens/favicon.ico">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC">
+<style>
+body, html {height: 100%}
+body,h1,h2,h3,h4,h5,h6 {font-family: 'Times New Roman', Times, serif; }
+.menu {display: none}
+.bgimg {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(imagens/logo\ cafe.jpg);
+  min-height: 100%;
+}
+</style>
+</head>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top w3-hide-small">
+  <div class="w3-bar w3-xlarge w3-black w3-opacity w3-hover-opacity-off" id="myNavbar">
+    <a href="#" class="w3-bar-item w3-button">Início</a>
+    <a href="#menu" class="w3-bar-item w3-button">Cardápio</a>
+    <a href="#about" class="w3-bar-item w3-button">Sobre</a>
+    <a href="#myMap" class="w3-bar-item w3-button">Contato</a>
+  </div>
+</div>
+  
+<!-- Header with image -->
+<header class="bgimg w3-display-container w3-grayscale-min" id="home">
+  <div class="w3-display-bottomleft w3-padding">
+    <span class="w3-tag w3-xlarge">Aberto das 08h às 20h</span>
+  </div>
+  <div class="w3-display-middle w3-center">
+    <span class="w3-text-white w3-hide-small" style="font-size:100px"><br></span>
+    <span class="w3-text-white w3-hide-large w3-hide-medium" style="font-size:60px"><b><br></b></span>
+    <p><a href="#menu" class="w3-button w3-xxlarge w3-black">Deixe-me ver o cardápio</a></p>
+  </div>
+</header>
+
+<!-- Menu Container -->
+<div class="w3-container w3-brown w3-padding-64 w3-xxlarge" id="menu">
+  <div class="w3-content">
+  
+    <h1 class="w3-center w3-jumbo" style="margin-bottom:64px">Cardápio</h1>
+    <div class="w3-row w3-center w3-border w3-border-dark-grey">
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Pizza');" id="myLink">
+        <div class="w3-col s4 tablink  w3-padding-large w3-hover-white w3-black">Cafés</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Pasta');">
+        <div class="w3-col s4 tablink w3-padding-large w3-hover-white w3-black">Salgados</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Starter');">
+        <div class="w3-col s4 tablink w3-padding-large w3-hover-white w3-black">Doces</div>
+      </a>
+    </div>
+
+    <div id="Pizza" class="w3-container menu w3-padding-32 w3-white">
+      <h1><b>Expresso</b> <span class="w3-right w3-tag w3-brown w3-round">
+        Pequeno (30ml) R$ 5,50<hr>
+        Médio (60ml)   R$ 8,00 <hr>
+        Grande (120ml) R$ 11,50
+      </span></h1>
+      <p class="w3-text-grey"> Sabor forte e concentrado, com um toque de acidez. É a base para vários outros cafés.</p>
+      <hr>
+  
+      <h1><b>Café Americano</b> <span class="w3-right w3-tag w3-brown w3-round">
+        Pequeno (250ml) R$ 7,00 <hr>
+        Médio (450ml)   R$ 10,00
+
+      </span></h1>
+      <p class="w3-text-grey">Feito adicionando água quente ao espresso, resultando em uma bebida mais suave e menos concentrada.</p>
+      <hr>
+      
+      <h1><b>Cappuccino</b> <span class="w3-right w3-tag w3-brown w3-round">
+        Pequeno (250ml) R$ 7,00 <hr>
+        Médio  (400ml) R$ 9,00
+     
+      </span></h1>
+      <p class="w3-text-grey">Uma mistura equilibrada de espresso, leite vaporizado e espuma de leite. Tem um sabor suave e cremoso.</p>
+      <hr>
+
+      <h1><b>Latte</b> <span class="w3-right w3-tag w3-brown w3-round">
+        Pequeno (150ml) R$ 8,50 <hr>
+        Médio (300ml) R$ 11,00
+
+      </span></h1>
+      <p class="w3-text-grey">Feito com espresso e uma grande quantidade de leite vaporizado, resultando em uma bebida suave e cremosa.</p>
+      <hr>
+
+      <h1><b>Macchiato</b> <span class="w3-right w3-tag w3-brown w3-round">
+        Pequeno (250ml) R$ 6,00 <hr>
+        Médio (350ml) R$ 9,00
+
+      </span></h1>
+      <p class="w3-text-grey">Espresso com uma pequena quantidade de leite vaporizado, deixando um sabor intenso do café.</p>
+      <hr>
+
+      <h1><b>Mocha</b> <span class="w3-right w3-tag w3-brown w3-round">
+        Pequeno (350ml) R$ 13,00 <hr>
+        Médio (550ml) R$ 15,00
+
+      </span></h1>
+      <p class="w3-text-grey">Um delicioso mix de espresso, leite vaporizado, chocolate e chantilly, com um sabor doce e cremoso.</p>
+      <hr>
+
+      <h1><b>Flat White</b> <!--<span class="w3-tag w3-red w3-round">Hot!</span>--><span class="w3-right w3-tag w3-brown w3-round">
+        Pequeno  R$ 9,50 <hr>
+        Médio   R$ 12,25
+      
+      </span></h1>
+      <p class="w3-text-grey">Similar ao latte, mas com uma proporção maior de café para leite, oferecendo um sabor forte e aveludado.</p>
+      <hr>
+
+      <h1><b>Café Cold Brew</b> <!--<span class="w3-tag w3-grey w3-round">New</span>--><span class="w3-right w3-tag w3-brown w3-round">
+        Pequeno (250ml) R$ 7,00 <hr>
+        Médio (450ml)   R$ 9,50
+
+      </span></h1>
+      <p class="w3-text-grey">Café moído grosseiramente infundido a frio por várias horas, resultando em um café menos ácido e mais suave.</p>
+      <hr>
+
+      <h1><b>Café Turco</b> <span class="w3-right w3-tag w3-brown w3-round">
+        Pequeno R$ 7,00<hr>
+        Médio   R$ 10,50
+       
+      </span></h1>
+      <p class="w3-text-grey">Café moído muito fino, preparado com água e açúcar, resultando em uma bebida forte e doce.</p>
+      <hr>
+
+      <h1><b>Café Viennese</b> <span class="w3-right w3-tag w3-brown w3-round">
+        Pequeno R$ 8,50<hr>
+        Médio   R$ 11,50
+       
+      </span></h1>
+      <p class="w3-text-grey">Espresso com chantilly e cacau, proporcionando um sabor rico e indulgente.
+      </p>
+      <hr>
+
+      <h1><b>Café Irlandês</b> <span class="w3-right w3-tag w3-brown w3-round">
+        Pequeno R$ 14,00<hr>
+        Médio   R$ 16,75
+       
+      </span></h1>
+      <p class="w3-text-grey">Café com uísque, açúcar e creme, oferecendo uma combinação equilibrada de amargor e doçura.</p>
+      <hr>
+
+      <h1><b>Brigadeiro Latte </b> <span class="w3-right w3-tag w3-brown w3-round">
+        Pequeno (200ml) R$15,00 <hr>
+        Médio (350ml)   R$22,50 <hr>
+        Grande (500ml)  R$28,00
+      </span></h1>
+      <p class="w3-text-grey">Expresso com leite vaporizado e calda de brigadeiro, finalizado com chantilly de brigadeiro e granulado de chocolate.</p>
+      <hr>
+
+      <span class="w3-center w3-tag w3-brown w3-round ">
+       <b>Extras</b> <br> <hr>
+       Adicional de chantilly - R$ 2,00 <hr>
+       Xarope de baunilha - R$ 1,00 <hr>
+       Xarope de caramelo - R$ 1,50 <hr>
+       Leite de amêndoa ou soja - R$ 2,00
+      </span></h1>
+
+    </div>
+
+    <div id="Pasta" class="w3-container menu w3-padding-32 w3-white">
+      <h1><b>Torta Salgada</b> <!--<span class="w3-tag w3-grey w3-round">Popular</span>--> <span class="w3-right w3-tag w3-brown w3-round">
+      R$ 12,00
+      </span></h1>
+      <p class="w3-text-grey">Uma torta salgada, aonde com sua massa desmanchando em sua boca, se dá a sensação exuberante de sabores salgados sem exageros. <br>
+        (Sabores: Frango com Catupiry / Carne / 4 Queijos / Calabresa / Bauru).
+        
+        </p>
+      <hr>
+   
+      <h1><b>Empada</b> <span class="w3-right w3-tag w3-brown w3-round">
+        R$ 8,00
+      </span></h1>
+      <p class="w3-text-grey">As empadas exalam uma mistura mágica de sabores, onde massa delicada abraça recheios surpreendentes. Uma dança sutil de ingredientes
+        <br>(Sabores: Calabresa / Presunto e Queijo / Frango / Carne / Palmito).
+        </p>
+      <hr>
+      
+      <h1><b>Coxinha</b> <span class="w3-right w3-tag w3-brown w3-round">
+       Media R$ 6,50 <hr>
+       Grande R$ 11,00
+      </span></h1>
+      <p class="w3-text-grey">Nossa coxinha definitivamente crocante e com um sabor salgado calmamente caminhando para seu paladar mais profundo.
+        (Sabores: Frango / Frango com catupiry).</p>
+      <hr>
+
+      <h1><b>Pão de queijo</b> <span class="w3-right w3-tag w3-brown w3-round">
+        4 unidades R$ 7,00 <hr>
+        Grande R$ 14,00
+      </span></h1>
+      <p class="w3-text-grey">O Pão de queijo feito com uma complexidade e maciez que deixam água na boca, sendo um dos mais pedidos ao redor de todo o Brasil.</p>
+    
+      <h1><b>Esfirra</b> <span class="w3-right w3-tag w3-brown w3-round">
+      R$ 9,00
+       </span></h1>
+       <p class="w3-text-grey">Um dos nossos clássicos, tendo foco em seu interior macio e suculento, com sabores difíceis de serem esquecidos apenas por comer um.
+        (Frango / Calabresa / Queijo / Bauru).
+        </p>
+       <hr>
+
+       <h1><b>Croassain't</b> <span class="w3-right w3-tag w3-brown w3-round">
+       R$ 14,00
+       </span></h1>
+       <p class="w3-text-grey">Um exuberante salgado, vindo de fora, contando sabores que arrasam corações, entre sua crosta crocante e macio por dentro.
+        (Sabores: Frango / Presunto e queijo / Padrão / Queijo parmesão).
+        </p>
+       <hr>
+
+    </div>
+
+
+    <div id="Starter" class="w3-container menu w3-padding-32 w3-white">
+      <h1><b>Petit gateau'</b><span class="w3-right w3-tag w3-brown w3-round">
+        R$ 16,00
+      </span></h1>
+      <p class="w3-text-grey">O petit gateau é uma exuberante obra culinária, feito com nosso chocolate meio amargo, cuja crosta exterior se revela crocante, enquanto seu núcleo abraça uma textura indulgente e cremosa. Uma experiência sensorial que eleva o paladar a novas alturas. (É acompanhado com uma bola de sorvete de passas ao rum.) </p>
+      <hr>
+   
+      <h1><b>Torta doce</b> <span class="w3-right w3-tag w3-brown w3-round">
+        R$ 11,50
+      </span></h1>
+      <p class="w3-text-grey">Uma torta doce, com sua massa crocante, revela uma tríade de sabores distintos em seu recheio. 
+        (Sabores: Morango com Chantily / Limão com Meregue / Pistache e Framboesa / Chocolate com Coco).
+        </p>
+      <hr>
+      
+      <h1><b>Brigadeiro</b> <span class="w3-right w3-tag w3-brown w3-round">
+        5 unidades R$ 10,00 <hr>
+        Grande R$ 15,00
+      </span></h1>
+      <p class="w3-text-grey">Uma linda obra culinária Brasileira, aonde se usa o doce do chocolate para ser criado um dos melhores doces, feito cuidadosamente com gotas de chocolate meio amargo e raspas de chocolate.</p>
+      
+    </div><br>
+
+  </div>
+</div>
+
+<!-- About Container -->
+<div class="w3-container w3-padding-64 w3-red w3-grayscale w3-xlarge" id="about">
+  <div class="w3-content">
+    <h1 class="w3-center w3-jumbo" style="margin-bottom:64px">Sobre</h1>
+    <p>Tudo começou quando um professor passou um trabalho em grupo, que precisava ler e criar. Mas nenhum de nós tínhamos um local adequado para isso, então decidimos marcar de realizar o trabalho em uma biblioteca, um lugar calmo e silencioso.  Passamos horas lá, até que ficamos com fome e percebemos que não tinha um lugar que vendia alimentos, nem mesmo café por perto. Conversando sobre o assunto, idealizamos o lugar perfeito para estudos e trabalhos, um lugar onde poderíamos estudar em paz e tranquilidade. Então decidimos unir nossas habilidades e começar uma empresa, uma cafeteria onde as pessoas pudessem vir tomar um delicioso café, aproveitando de um espaço silencioso. E assim nasceu nossa empresa The Silence Coffee.</p>
+    
+ <br>
+    <h2><b>Horário de funcionamento</b></h2>
+    
+    <div class="w3-row">
+      <div class="w3-col s6">
+        <p>Segunda-Feira à Sexta-Feira das 08h às 20h</p>
+        
+      </div>
+      <div class="w3-col s6">
+        <p>Sábado das 08h às 14h</p>
+        <b>Domingo não Funcionamos</b>
+      
+      </div>
+    </div>
+    
+  </div>
+</div>
+
+<!-- Image of location/map -->
+<img src="imagens/mapa.jpg" class="w3-image w3-greyscale" style="width:55%;" id="myMap">
+
+<!-- Contact -->
+<div class="w3-container w3-padding-64 w3-brown w3-grayscale-min w3-xlarge">
+  <div class="w3-content">
+    <h1 class="w3-center w3-jumbo" style="margin-bottom:64px">Contato</h1>
+   
+<p>Email: thesilence648@gmail.com</p>
+<p>Instagram: thesilencecoffe</p>
+<p>Telefone: 39596718</p>
+<p>Local: Rua Amaral Gurgel, N. 245</p>
+   
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-48 w3-xxlarge">
+  <p>Siga nossa cafetaria <br><a href="https://www.instagram.com/thesilencecoffe/" title="W3.CSS" target="_blank" class="w3-hover-text-green">The Silence Coffee </a></p>
+</footer>
+
+<script>
+// Tabbed Menu
+function openMenu(evt, menuName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("menu");
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+     tablinks[i].className = tablinks[i].className.replace(" w3-red", "");
+  }
+  document.getElementById(menuName).style.display = "block";
+  evt.currentTarget.firstElementChild.className += " w3-red";
+}
+document.getElementById("myLink").click();
+</script>
+
+</body>
+</html>
